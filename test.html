@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<script src="test.js"></script>
+	<style type="text/css">
+		body
+		{
+			text-align: center;
+		}
+		button
+		{
+			font-size: 250%;
+			color: seagreen;
+			border: 2px solid seagreen;
+			margin-top: 5%;
+			margin-bottom: 5%;
+			padding: 2%;
+		}
+	</style>
+</head>
+<body>
+	<button onclick = "
+	var input_array = new Array(1,1,2,2,3,3,4,4,5);
+	repeat(input_array)">getting rid of repetition in array</button>
+	<br>
+	<button onclick = "
+	var input_array = new Array(2,4,6,6,8,1,18,4,651,48,52);
+	sort(input_array)">sorting an array in the ascending order</button>
+	<br>
+	<button onclick = "
+	var input = new Array(2);
+	input[0] = 5;
+	input[1] = 50;
+	find_slope(input)">Find slope for the given points</button>
+	<br>
+	<button onclick="initiate_writeup()">write the program</button>
+	<br>
+	<button onclick="concat('hello',' world')">concat two strings</button>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>programmer</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="cells.js"></script>
+	<script src="buttons.js"></script>
+</head>
+<body onload="window.scrollTo({ top: 0, behavior: 'smooth' });">
+	<div id="abouts">
+		<b>30-5-2021 .. 3:00 PM -- First upload</b>
+		<br><br>
+		<b>WOULDN'T IT BE BETTER IF A PROGRAM SOLVES A PATTERN FOR YOU AND GUIDES YOU THROUGH THE INTRICACIES ?</b><br>
+		Well, guess what ! THIS DOES EXACTLY THE THING !<br>
+		<br>
+		this program solves the intricacies of the problem of a simple pattern and then displays the findings to efficiently lead a rookie programmer
+		<br>
+		This program targets at solving the common programming questions based on deciphering patterns and coding so as to print specific patterns. This ambitious project is purely experimental and is a very presonal one.<br>
+		This is still under development but hopefully this could be instrumental in helping us deciphering the problems of patterns and also provide a tool for easier programming<br>
+		<b>It would be really appreciated if you help develop a better version. Contact me at daskivuos@gmail.com</b><br>
+		This, however, does not work with manmade classifications such as odd-even numbers or prime or fibonacci, etc. yet<br><br>
+		Instead of the objects, it is as good to enter only vertices but the input figure must be a closed one with a simple design<br>
+		The sides must be straight lines and not other figures.<br>
+		Please try to provide figures with a certain degree of symmetry<br><hr><br>
+		<b>THIS SHOWS THE RESULT IN THE PROGRAMMING LANGUAGE C<br>
+		<b>We do plan on resolving these constraints in future updates but as of now, these rules need to be followed</b><br>
+	</div>
+	<button class="next" id="accept_pattern" onclick="input_system()">Enter the pattern</button>
+
+	<!--even though a single segment of code can potentially prepare the buttons, for the prototype, we discretely define all to avoid any complicacy-->
+	<table id="table">                    <!--we consider a resolution of 10 x 10 for this project-->
+		<tr>                              <!--row number 1-->
+			<td><button class="cell" id="00" onclick="toggle00()">x</td><!--cell number 1 of row number 1-->
+			<td><button class="cell" id="01" onclick="toggle01()">x</td><!--cell number 2 of row number 1-->
+			<td><button class="cell" id="02" onclick="toggle02()">x</td><!--cell number 3 of row number 1-->
+			<td><button class="cell" id="03" onclick="toggle03()">x</td><!--cell number 4 of row number 1-->
+			<td><button class="cell" id="04" onclick="toggle04()">x</td><!--cell number 5 of row number 1-->
+			<td><button class="cell" id="05" onclick="toggle05()">x</td><!--cell number 6 of row number 1-->
+			<td><button class="cell" id="06" onclick="toggle06()">x</td><!--cell number 4 of row number 1-->
+			<td><button class="cell" id="07" onclick="toggle07()">x</td><!--cell number 8 of row number 1-->
+			<td><button class="cell" id="08" onclick="toggle08()">x</td><!--cell number 9 of row number 1-->
+			<td><button class="cell" id="09" onclick="toggle09()">x</td><!--cell number 10 of row number 1-->
+		</tr>
+		<tr>                              <!--row number 2-->
+			<td><button class="cell" id="10" onclick="toggle10()">x</td><!--cell number 1 of row number 2-->
+			<td><button class="cell" id="11" onclick="toggle11()">x</td><!--cell number 2 of row number 2-->
+			<td><button class="cell" id="12" onclick="toggle12()">x</td><!--cell number 3 of row number 2-->
+			<td><button class="cell" id="13" onclick="toggle13()">x</td><!--cell number 4 of row number 2-->
+			<td><button class="cell" id="14" onclick="toggle14()">x</td><!--cell number 5 of row number 2-->
+			<td><button class="cell" id="15" onclick="toggle15()">x</td><!--cell number 6 of row number 2-->
+			<td><button class="cell" id="16" onclick="toggle16()">x</td><!--cell number 4 of row number 2-->
+			<td><button class="cell" id="17" onclick="toggle17()">x</td><!--cell number 8 of row number 2-->
+			<td><button class="cell" id="18" onclick="toggle18()">x</td><!--cell number 9 of row number 2-->
+			<td><button class="cell" id="19" onclick="toggle19()">x</td><!--cell number 10 of row number 2-->
+		</tr>
+		<tr>                              <!--row number 3-->
+			<td><button class="cell" id="20" onclick="toggle20()">x</td><!--cell number 1 of row number 3-->
+			<td><button class="cell" id="21" onclick="toggle21()">x</td><!--cell number 2 of row number 3-->
+			<td><button class="cell" id="22" onclick="toggle22()">x</td><!--cell number 3 of row number 3-->
+			<td><button class="cell" id="23" onclick="toggle23()">x</td><!--cell number 4 of row number 3-->
+			<td><button class="cell" id="24" onclick="toggle24()">x</td><!--cell number 5 of row number 3-->
+			<td><button class="cell" id="25" onclick="toggle25()">x</td><!--cell number 6 of row number 3-->
+			<td><button class="cell" id="26" onclick="toggle26()">x</td><!--cell number 4 of row number 3-->
+			<td><button class="cell" id="27" onclick="toggle27()">x</td><!--cell number 8 of row number 3-->
+			<td><button class="cell" id="28" onclick="toggle28()">x</td><!--cell number 9 of row number 3-->
+			<td><button class="cell" id="29" onclick="toggle29()">x</td><!--cell number 10 of row number 3-->
+		</tr>
+		<tr>                              <!--row number 4-->
+			<td><button class="cell" id="30" onclick="toggle30()">x</td><!--cell number 1 of row number 4-->
+			<td><button class="cell" id="31" onclick="toggle31()">x</td><!--cell number 2 of row number 4-->
+			<td><button class="cell" id="32" onclick="toggle32()">x</td><!--cell number 3 of row number 4-->
+			<td><button class="cell" id="33" onclick="toggle33()">x</td><!--cell number 4 of row number 4-->
+			<td><button class="cell" id="34" onclick="toggle34()">x</td><!--cell number 5 of row number 4-->
+			<td><button class="cell" id="35" onclick="toggle35()">x</td><!--cell number 6 of row number 4-->
+			<td><button class="cell" id="36" onclick="toggle36()">x</td><!--cell number 4 of row number 4-->
+			<td><button class="cell" id="37" onclick="toggle37()">x</td><!--cell number 8 of row number 4-->
+			<td><button class="cell" id="38" onclick="toggle38()">x</td><!--cell number 9 of row number 4-->
+			<td><button class="cell" id="39" onclick="toggle39()">x</td><!--cell number 10 of row number 4-->
+		</tr>
+		<tr>                              <!--row number 5-->
+			<td><button class="cell" id="40" onclick="toggle40()">x</td><!--cell number 1 of row number 5-->
+			<td><button class="cell" id="41" onclick="toggle41()">x</td><!--cell number 2 of row number 5-->
+			<td><button class="cell" id="42" onclick="toggle42()">x</td><!--cell number 3 of row number 5-->
+			<td><button class="cell" id="43" onclick="toggle43()">x</td><!--cell number 4 of row number 5-->
+			<td><button class="cell" id="44" onclick="toggle44()">x</td><!--cell number 5 of row number 5-->
+			<td><button class="cell" id="45" onclick="toggle45()">x</td><!--cell number 6 of row number 5-->
+			<td><button class="cell" id="46" onclick="toggle46()">x</td><!--cell number 4 of row number 5-->
+			<td><button class="cell" id="47" onclick="toggle47()">x</td><!--cell number 8 of row number 5-->
+			<td><button class="cell" id="48" onclick="toggle48()">x</td><!--cell number 9 of row number 5-->
+			<td><button class="cell" id="49" onclick="toggle49()">x</td><!--cell number 10 of row number 5-->
+		</tr>
+		<tr>                              <!--row number 6-->
+			<td><button class="cell" id="50" onclick="toggle50()">x</td><!--cell number 1 of row number 6-->
+			<td><button class="cell" id="51" onclick="toggle51()">x</td><!--cell number 2 of row number 6-->
+			<td><button class="cell" id="52" onclick="toggle52()">x</td><!--cell number 3 of row number 6-->
+			<td><button class="cell" id="53" onclick="toggle53()">x</td><!--cell number 4 of row number 6-->
+			<td><button class="cell" id="54" onclick="toggle54()">x</td><!--cell number 5 of row number 6-->
+			<td><button class="cell" id="55" onclick="toggle55()">x</td><!--cell number 6 of row number 6-->
+			<td><button class="cell" id="56" onclick="toggle56()">x</td><!--cell number 4 of row number 6-->
+			<td><button class="cell" id="57" onclick="toggle57()">x</td><!--cell number 8 of row number 6-->
+			<td><button class="cell" id="58" onclick="toggle58()">x</td><!--cell number 9 of row number 6-->
+			<td><button class="cell" id="59" onclick="toggle59()">x</td><!--cell number 10 of row number 6-->
+		</tr>
+		<tr>                              <!--row number 7-->
+			<td><button class="cell" id="60" onclick="toggle60()">x</td><!--cell number 1 of row number 7-->
+			<td><button class="cell" id="61" onclick="toggle61()">x</td><!--cell number 2 of row number 7-->
+			<td><button class="cell" id="62" onclick="toggle62()">x</td><!--cell number 3 of row number 7-->
+			<td><button class="cell" id="63" onclick="toggle63()">x</td><!--cell number 4 of row number 7-->
+			<td><button class="cell" id="64" onclick="toggle64()">x</td><!--cell number 5 of row number 7-->
+			<td><button class="cell" id="65" onclick="toggle65()">x</td><!--cell number 6 of row number 7-->
+			<td><button class="cell" id="66" onclick="toggle66()">x</td><!--cell number 4 of row number 7-->
+			<td><button class="cell" id="67" onclick="toggle67()">x</td><!--cell number 8 of row number 7-->
+			<td><button class="cell" id="68" onclick="toggle68()">x</td><!--cell number 9 of row number 7-->
+			<td><button class="cell" id="69" onclick="toggle69()">x</td><!--cell number 10 of row number 7-->
+		</tr>
+		<tr>                              <!--row number 8-->
+			<td><button class="cell" id="70" onclick="toggle70()">x</td><!--cell number 1 of row number 8-->
+			<td><button class="cell" id="71" onclick="toggle71()">x</td><!--cell number 2 of row number 8-->
+			<td><button class="cell" id="72" onclick="toggle72()">x</td><!--cell number 3 of row number 8-->
+			<td><button class="cell" id="73" onclick="toggle73()">x</td><!--cell number 4 of row number 8-->
+			<td><button class="cell" id="74" onclick="toggle74()">x</td><!--cell number 5 of row number 8-->
+			<td><button class="cell" id="75" onclick="toggle75()">x</td><!--cell number 6 of row number 8-->
+			<td><button class="cell" id="76" onclick="toggle76()">x</td><!--cell number 4 of row number 8-->
+			<td><button class="cell" id="77" onclick="toggle77()">x</td><!--cell number 8 of row number 8-->
+			<td><button class="cell" id="78" onclick="toggle78()">x</td><!--cell number 9 of row number 8-->
+			<td><button class="cell" id="79" onclick="toggle79()">x</td><!--cell number 10 of row number 8-->
+		</tr>
+		<tr>                              <!--row number 9-->
+			<td><button class="cell" id="80" onclick="toggle80()">x</td><!--cell number 1 of row number 9-->
+			<td><button class="cell" id="81" onclick="toggle81()">x</td><!--cell number 2 of row number 9-->
+			<td><button class="cell" id="82" onclick="toggle82()">x</td><!--cell number 3 of row number 9-->
+			<td><button class="cell" id="83" onclick="toggle83()">x</td><!--cell number 4 of row number 9-->
+			<td><button class="cell" id="84" onclick="toggle84()">x</td><!--cell number 5 of row number 9-->
+			<td><button class="cell" id="85" onclick="toggle85()">x</td><!--cell number 6 of row number 9-->
+			<td><button class="cell" id="86" onclick="toggle86()">x</td><!--cell number 4 of row number 9-->
+			<td><button class="cell" id="87" onclick="toggle87()">x</td><!--cell number 8 of row number 9-->
+			<td><button class="cell" id="88" onclick="toggle88()">x</td><!--cell number 9 of row number 9-->
+			<td><button class="cell" id="89" onclick="toggle89()">x</td><!--cell number 10 of row number 9-->
+		</tr>
+		<tr>                              <!--row number 10-->
+			<td><button class="cell" id="90" onclick="toggle90()">x</td><!--cell number 1 of row number 10-->
+			<td><button class="cell" id="91" onclick="toggle91()">x</td><!--cell number 2 of row number 10-->
+			<td><button class="cell" id="92" onclick="toggle92()">x</td><!--cell number 3 of row number 10-->
+			<td><button class="cell" id="93" onclick="toggle93()">x</td><!--cell number 4 of row number 10-->
+			<td><button class="cell" id="94" onclick="toggle94()">x</td><!--cell number 5 of row number 10-->
+			<td><button class="cell" id="95" onclick="toggle95()">x</td><!--cell number 6 of row number 10-->
+			<td><button class="cell" id="96" onclick="toggle96()">x</td><!--cell number 4 of row number 10-->
+			<td><button class="cell" id="97" onclick="toggle97()">x</td><!--cell number 8 of row number 10-->
+			<td><button class="cell" id="98" onclick="toggle98()">x</td><!--cell number 9 of row number 10-->
+			<td><button class="cell" id="99" onclick="toggle99()">x</td><!--cell number 10 of row number 10-->
+		</tr>
+	</table>
+	<button class="next" id="accept_table" onclick="accept_table();show_table();show_result();">Decipher</button>
+
+	<button class="next" id="see_result" onclick="breaker();print_message();">Go on to see the result</button>
+
+	<div id="messages">Here the 'thinking' is projected <br></div>
+
+	<button id="reload" onclick="location.reload();">Reset Everything</button>
+
+	<!--
+	<div id="extras"></div>
+	<button id="test" onclick="
+	//createprimitive();
+	//var check = check_hole();
+	//console.log(check);
+	//print_message();
+	//var check1 = dimensions('rows_filled');
+	//console.log(check1);
+	//var check2 = dimensions('max_column');
+	//console.log(check2);
+	//var work_table = table;
+	//var check14 = compress('table',table);
+	//console.log(check14);
+	// var check4 = segmentation('x');
+	// var check5 = segmentation('y');
+	// var check6 = segmentation('x_reverse');
+	// var check7 = segmentation('y_reverse');
+	// var check8 = segmentation('common_x');
+	// var check9 = segmentation('uncommon_x');
+	//var check10 = segmentation('breaks_x');
+	// var check11 = segmentation('common_y');
+	// var check12 = segmentation('uncommon_y');
+	//var check13 = segmentation('breaks_y');
+	// console.clear();
+	// console.log('segments in x in forward direction');
+	// console.log(check4);
+	// console.log('segments in y in forward direction');
+	// console.log(check5);
+	// console.log('segments in x in reverse direction');
+	// console.log(check6);
+	// console.log('segments in y in reverse direction');
+	// console.log(check7);
+	// console.log('common segments in x');
+	// console.log(check8);
+	// console.log('uncommon segments in x');
+	// console.log(check9);
+	//console.log('total segments in x');
+	//console.log(check10);
+	// console.log('common segments in y');
+	// console.log(check11);
+	// console.log('uncommon segments in y');
+	// console.log(check12);
+	//console.log('total segments in y');
+	//console.log(check13);
+	//var check3 = dimensions('rows_filled');
+	//console.log(check3);
+
+	breaker();
+	//initiate_writeup();
+	print_message();
+	">Test_button :: to analyze various controversial statements in the code and watch over functions</button>
+    -->
+</body>
+</html>

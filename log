@@ -1,0 +1,98 @@
+It holds the list of the important functions used for the project  |
+                                                                   |
+                                                                   |  Souvik Das, daskivuos@gmail.com
+--------------------------------------------------------------------
+  
+  ----------------------------------------------------------------------------------------------ACCESSORIES
+  the following are the functions that act as accessories for co-operative design
+
+>> accept_table()
+   it's purpose is to accept the input after the user has entered the pattern
+   this is the first program to run in any sequence because with the values, the program is useless
+
+>> show_table()
+   it is aimed at demonstrating the entered table as a proof of the input system working alright
+
+>> print_message()
+   it prints the variable called message which accumulates all the information fed to it
+   so that the user can understand the workflow
+
+>> createprimitive()
+   this creates a discrete block using the last number of column and row that has been used
+   this is just for primary visualization of the table
+   this works upon the basic table that has been taken as input from the interface
+
+>> check_hole()
+   this checks if there is any hole within the pattern
+   this works upon the basic table that has been taken as input from the interface
+
+--------------------------------------------------------------------------------------------------MECHANISM
+the following help is dealing with the mechansim of action
+
+>> dimensions(x)
+   the purpose of this is to help develop an envelope.
+   it takes one input but the input needs to be one of three options
+   (it works on the main table that has been taken as input from the interface)
+
+   max_column  = gives the higher edge of the co-ordinate filled up along the columns
+   rows_filled = gives the numbers of the last columns that has been used for each row in the table
+   rows        = gives the number of the last row that has been used
+
+>> compress(x)
+   the target for this function is to omit every unused space in the canvas
+   the main part of function is identified and extracted in the form of a rectangle
+   this is done to easen sunsequent workings
+   it can take only one input but that must be among three options
+   it works upon the worktable
+
+   rows    = this returns the number of rows present in the compressed table
+   columns = this returns the number of columns present in the compressed table
+   table   = this returns the compressed table for subsequent functions
+
+>> segmentation(x, worktable)
+   the purpose of this function is to identify the various sections in the plot
+   wherever the simple governing function apparently differs, that point is recorded as a boundary
+   it can take only one input but that must be among two options
+   (it works upon the compressed table)
+
+   x          = this returns the breaking points in the x-axis from start to end
+   y          = this returns the breaking points in the y-axis from start to end
+   x_reverse  = this returns the breaking points in the x-axis coming backwards
+   y_reverse  = this returns the breaking points in the y-axis coming from bottom to up
+   common_x   = this returns the common breakpoints in the x-axis going from front to end and end to start
+   uncommon_x = this returns the uncommon breakpoints in the x-axis going front to end and end to start
+   common_y   = this returns the common breakpoints in the y-axis going from front to end and end to start
+   uncommon_y = this returns the uncommon breakpoints in the y-axis going front to end and end to start
+   breaks_x   = this returns the whole array of breakpoints in the x-axis
+   breaks_y   = this returns the whole array of breakpoints in the y-axis
+
+   there is this input worktable that takes in the table that is to be operated upon
+
+>> repeat(test_array)
+   the function takes in an array and eleminates any repetition in the array
+   it returns the rectified array
+
+>> sort(input_array)
+   this takes in an array and sorts it in ascending order
+   this returns the array sorted out
+
+>> find_slope(input)
+   this function takes in an array of two elements as input
+   this goes in the terms of x*10+y each
+   it then breaks the inputs into two distinct co-ordinates
+   then it calculates the slope between the two co-ordinates
+   it returns the slope
+
+   --------------------------------------------------------------------------------------------------MAIN FUNCTION
+   the following is the main function
+
+ >> breaker()
+    this is the main function
+    this takes nothing as input
+    this gives nothing as output
+    the main function of this is to host the integration of all the other funcitons for a good synchrony
+    this is the main operating function that co-ordinates all the internal activities
+    this also calls the function to print the message
+
+    ------------------------------------------------------------------------------------------------HELP WRITE CODE
+    these functions desribed below are objected towards easy and efficient modelling of the code

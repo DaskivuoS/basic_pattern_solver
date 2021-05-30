@@ -1,0 +1,16 @@
+3:00PM 30-5-2021
+Target Set By : Souvik Das, daskivuos@gmail.com
+1. the model of printing of the stars and spaces by using loops be introduced
+2. further segmentation of the project into more functions so as to locate every detail
+3. get printed numbers instead of just * and space, a program to be used is provided in references.js
+4. patterns among the various sections to be recognized
+5. miniaturization of the program using identified patterns in various segments
+6. updated segmentation of the input table so as to identify the breakpoints which are not necessarily in the outer envelope
+7. make the system friendly to assymetrical shapes
+8. LANGUAGE AVAILABILITY -- ADD JAVA / C++ AND PYTHON (most commonly used programming languages among students)
+9. LANGUAGE AVAILABILITY -- MAKE A VERSION WHICH DISPLAYS THE BASE AND THE HELPING TEXTS IN BENGALI
+10. better design of interface
+11. include<stdio.h> is not getting printed || check out why and solve the problem
+12. extensive debugging
+
+------------------------------------------------------------------------------------------------------------------------------------------
